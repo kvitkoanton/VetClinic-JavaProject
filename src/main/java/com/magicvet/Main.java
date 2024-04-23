@@ -14,11 +14,4 @@ public class Main {
         runner.run();
     }
 
-
-
-// here was Method "auth"
-
-
-
-
 }

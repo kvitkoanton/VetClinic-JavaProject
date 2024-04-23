@@ -14,7 +14,7 @@ public class PetService {
 
         String type = Main.SCANNER.nextLine();
 
-        if (DOG_TYPE.equals(type)) { //  если ТИП собака
+        if (DOG_TYPE.equals(type)) { //  якщо ТИП собака
             pet = buildDog();
         }else {
             pet = buildPet(type);
