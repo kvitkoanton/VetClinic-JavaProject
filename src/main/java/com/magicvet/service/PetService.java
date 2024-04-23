@@ -12,9 +12,9 @@ public class PetService {
         Pet pet = new Pet();
         System.out.print("Type (dog / cat / other): ");
 
-        String type = Main.SCANNER.nextLine();
+        String type = Main.SCANNER.nextLine().toLowerCase();  //перетворюємо в нижній регістр ".toLowerCase()")"
 
-        if (DOG_TYPE.equals(type)) { //  якщо ТИП собака
+        if (DOG_TYPE.equalsIgnoreCase(type)) { //  якщо ТИП собака (перевіряємо без урахування регістру "IgnoreCase")
             pet = buildDog();
         }else {
             pet = buildPet(type);
@@ -28,7 +28,7 @@ public class PetService {
         Dog dog = petToDog(pet);
 
         System.out.print("Size (XS / S / M / L / XXL): ");
-        dog.setSize(Main.SCANNER.nextLine());
+        dog.setSize(Main.SCANNER.nextLine().toUpperCase()); // перетворюємо в верхній регістр
 
         return dog;
     }
