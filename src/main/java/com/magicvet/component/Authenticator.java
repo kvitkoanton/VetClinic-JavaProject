@@ -13,6 +13,7 @@ public class Authenticator {
             String input = Main.SCANNER.nextLine();
             if (PASSWORD.equals(input)) {
                 accepted = true;
+
                 break;
             }
 

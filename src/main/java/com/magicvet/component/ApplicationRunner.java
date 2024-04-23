@@ -13,8 +13,6 @@ public class ApplicationRunner {
     private static String ANSWEAR_ADD_PET_YES = "Yes";
     private static String ANSWEAR_ADD_PET_NO = "No";
 
-
-
     public void run() {
         if (Authenticator.auth()) {
             Client client = clientService.registerNewClient();
@@ -23,6 +21,7 @@ public class ApplicationRunner {
 
                 System.out.print("Would you like to add a pet? (Yes / No): "); // функціонал перевірки необхідності клієнта у реєстрації улюбленця одразу.
                 String ANSWEAR = Main.SCANNER.nextLine().toLowerCase(); //перетворюємо в нижній регістр (.toLowerCase())
+
                 //No
                 if (ANSWEAR_ADD_PET_NO.equalsIgnoreCase(ANSWEAR)) { // Якщо No, не додаємо Pet (перевіряємо без урахування регістру IgnoreCase)
                     System.out.println("No pet added. You can add it at any time in the future.");
