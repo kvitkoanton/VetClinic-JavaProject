@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-03: Add a new pet.">
+    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-04: Show client Info (with pet)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/component/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/component/ApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/component/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/component/Authenticator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,13 +125,22 @@
       <option name="project" value="LOCAL" />
       <updated>1713888627746</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="REQ-04: Show client Info (with pet)">
+      <option name="closed" value="true" />
+      <created>1714305284841</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714305284841</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="REQ-01: Base authentication" />
     <MESSAGE value="REQ-02: Email Validation" />
     <MESSAGE value="REQ-03: Add a new pet." />
-    <option name="LAST_COMMIT_MESSAGE" value="REQ-03: Add a new pet." />
+    <MESSAGE value="REQ-04: Show client Info (with pet)" />
+    <option name="LAST_COMMIT_MESSAGE" value="REQ-04: Show client Info (with pet)" />
   </component>
 </project>
