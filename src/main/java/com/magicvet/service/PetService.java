@@ -1,6 +1,7 @@
 package main.java.com.magicvet.service;
 
 import main.java.com.magicvet.Main;
+import main.java.com.magicvet.model.Cat;
 import main.java.com.magicvet.model.Dog;
 import main.java.com.magicvet.model.Pet;
 
@@ -12,49 +13,29 @@ public class PetService {
     private static final String SEX_PATTERN = "^(male|female)$"; // шаблон для стать тварини
     private static final String NAME_PATTERN = "^[A-Z][a-z]*$"; // шаблон Ім'я
     private static final String DOG_TYPE = "dog";
+    private static final String CAT_TYPE = "cat";
 
     public Pet registerNewPet() {
-        Pet pet = new Pet();
-        System.out.print("Type (dog / cat / other): ");
+        Pet pet = null;
+        System.out.print("Type (dog / cat): ");
 
         String type = Main.SCANNER.nextLine().toLowerCase();  //перетворюємо в нижній регістр ".toLowerCase()")"
 
-        if (DOG_TYPE.equalsIgnoreCase(type)) { //  якщо ТИП собака (перевіряємо без урахування регістру "IgnoreCase")
-            pet = buildDog();
-        } else {
+        if (DOG_TYPE.equalsIgnoreCase(type) || CAT_TYPE.equalsIgnoreCase(type)) { //  якщо ТИП собака (перевіряємо без урахування регістру "IgnoreCase")
             pet = buildPet(type);
+        } else {
+            System.out.println("Unknown pet type. Please choose one of the following types " + type);;
         }
         return pet;
     }
 
-    private Dog buildDog() {
-        Pet pet = buildPet(DOG_TYPE);
-        Dog dog = petToDog(pet);
-
-        System.out.print("Size (XS / S / M / L / XL / XXL): ");
-        dog.setSize(Main.SCANNER.nextLine().toUpperCase()); // перетворюємо в верхній регістр
-        while (!isSizeValid(dog.getSize())) {
-            System.out.print("Invalid input. Please enter one of the following sizes (XS, S, M, L, XL, XXL): ");
-            dog.setSize(Main.SCANNER.nextLine().toUpperCase());
-        }
-        return dog;
-    }
-
-    private Dog petToDog(Pet pet) {
-        Dog dog = new Dog();
-        dog.setAge(pet.getAge());
-        dog.setName(pet.getName());
-        dog.setSex(pet.getSex());
-
-        return dog;
-    }
-
     private Pet buildPet(String type) {
-        Pet pet = new Pet();
+        Pet pet = type.equalsIgnoreCase(CAT_TYPE) ? new Cat() : new Dog();
         pet.setType(type);
 
         System.out.print("Sex (male / female): ");
         pet.setSex(Main.SCANNER.nextLine());
+
         while (!isSexValid(pet.getSex())) {
             System.out.print("Invalid input. Please enter one of the following sexes (male / female): ");
             pet.setSex(Main.SCANNER.nextLine());
@@ -65,9 +46,19 @@ public class PetService {
 
         System.out.print("Name: ");
         pet.setName(Main.SCANNER.nextLine());
+
         while (!isNameValid(pet.getName())) {
             System.out.print("Invalid input. Please enter the Name in following format (The first letter is capital, the rest are small): ");
             pet.setName(Main.SCANNER.nextLine());
+        }
+
+        if (type.equalsIgnoreCase(DOG_TYPE)) {
+            System.out.print("Size (XS / S / M / L / XL / XXL): ");
+            ((Dog) pet).setSize(Main.SCANNER.nextLine().toUpperCase()); // перетворюємо в верхній регістр
+            while (!isSizeValid(((Dog) pet).getSize())) {
+                System.out.print("Invalid input. Please enter one of the following sizes (XS, S, M, L, XL, XXL): ");
+                ((Dog) pet).setSize(Main.SCANNER.nextLine().toUpperCase());
+            }
         }
         return pet;
     }
@@ -87,5 +78,4 @@ public class PetService {
         Matcher matcherName = patternName.matcher(name);
         return matcherName.matches();
     }
-
 }

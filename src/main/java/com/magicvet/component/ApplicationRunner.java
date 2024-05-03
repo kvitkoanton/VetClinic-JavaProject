@@ -7,11 +7,11 @@ import main.java.com.magicvet.service.PetService;
 
 public class ApplicationRunner {
 
-    private final ClientService clientService = new ClientService(); //зробили final
-    private final PetService petService = new PetService(); //зробили final
+    private final ClientService clientService = new ClientService(); //переробив на final
+    private final PetService petService = new PetService(); //переробив на final
 
-    private static String ANSWEAR_ADD_PET_YES = "Yes";
-    private static String ANSWEAR_ADD_PET_NO = "No";
+    private static final String ANSWEAR_ADD_PET_YES = "Yes"; //переробив на final
+    private static final String ANSWEAR_ADD_PET_NO = "No"; //переробив на final
 
     public void run() {
         if (Authenticator.auth()) {
@@ -32,9 +32,11 @@ public class ApplicationRunner {
                     System.out.println("Adding a new pet."); //=> додаємо Pet
 
                     Pet pet = petService.registerNewPet();// виклик метода рєєстрації NewPet
-                    client.setPet(pet);
-                    pet.setOwnerName(client.getFirstName() + " " + client.getLastName());
-                    System.out.println("Pet has been added.");
+                    if ( (pet != null)) {
+                        client.setPet(pet);
+                        pet.setOwnerName(client.getFirstName() + " " + client.getLastName());
+                        System.out.println("Pet has been added.");
+                    }
 
                     System.out.println(client); //вивід Клиєнта
                 }
