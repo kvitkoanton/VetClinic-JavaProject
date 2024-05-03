@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-04: Show client Info (with pet)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Cat.java" afterDir="false" />
+    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-05: Remove pet type &quot;Other&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/component/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/component/ApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/component/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/component/Authenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +22,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="req-03_add_pet" />
+        <entry key="$PROJECT_DIR$" value="req-04_toString" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "kvitkoanton"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d7ed6cf8-3194-49bf-bba0-298a3ccccd2e" />
+        <option name="url" value="git@github.com:kvitkoanton/VetClinic-JavaProject.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -44,17 +53,17 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;req-04__toString&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "req-05__remove__unused__type",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -159,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714407680893</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="REQ-05: Remove pet type &quot;Other&quot;">
+      <option name="closed" value="true" />
+      <created>1714755455440</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714755455440</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -167,6 +184,7 @@
     <MESSAGE value="REQ-02: Email Validation" />
     <MESSAGE value="REQ-03: Add a new pet." />
     <MESSAGE value="REQ-04: Show client Info (with pet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="REQ-04: Show client Info (with pet)" />
+    <MESSAGE value="REQ-05: Remove pet type &quot;Other&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="REQ-05: Remove pet type &quot;Other&quot;" />
   </component>
 </project>
