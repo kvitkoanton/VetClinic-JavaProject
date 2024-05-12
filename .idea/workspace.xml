@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-05: Remove pet type &quot;Other&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/comparator/DogSizeComparator.java" afterDir="false" />
+    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-06: Sort dogs by size">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/comparator/PetAgeComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/component/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/component/ApplicationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Cat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +28,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="req-06_sort_dogs" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -44,6 +62,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -56,18 +77,18 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.SandBox.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "req-06__sort__dogs",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SandBox.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;req-06__sort__dogs&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SandBox" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.com.magicvet.SandBox" />
@@ -200,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714755455440</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="REQ-06: Sort dogs by size">
+      <option name="closed" value="true" />
+      <created>1715003291430</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715003291430</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,6 +238,7 @@
     <MESSAGE value="REQ-03: Add a new pet." />
     <MESSAGE value="REQ-04: Show client Info (with pet)" />
     <MESSAGE value="REQ-05: Remove pet type &quot;Other&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="REQ-05: Remove pet type &quot;Other&quot;" />
+    <MESSAGE value="REQ-06: Sort dogs by size" />
+    <option name="LAST_COMMIT_MESSAGE" value="REQ-06: Sort dogs by size" />
   </component>
 </project>

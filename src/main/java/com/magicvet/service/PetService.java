@@ -17,14 +17,14 @@ public class PetService {
 
     public Pet registerNewPet() {
         Pet pet = null;
-        System.out.print("Type (dog / cat): ");
-
-        String type = Main.SCANNER.nextLine().toLowerCase();  //перетворюємо в нижній регістр ".toLowerCase()")"
-
-        if (DOG_TYPE.equalsIgnoreCase(type) || CAT_TYPE.equalsIgnoreCase(type)) { //  якщо ТИП собака (перевіряємо без урахування регістру "IgnoreCase")
-            pet = buildPet(type);
-        } else {
-            System.out.println("Unknown pet type. Please choose one of the following types " + type);;
+        while (pet == null) {
+            System.out.print("Type (dog / cat): ");
+            String type = Main.SCANNER.nextLine().toLowerCase();
+            if (DOG_TYPE.equalsIgnoreCase(type) || CAT_TYPE.equalsIgnoreCase(type)) {
+                pet = buildPet(type);
+            } else {
+                System.out.print("Unknown pet type, please choose one of the following types (dog / cat): ");
+            }
         }
         return pet;
     }
@@ -37,18 +37,20 @@ public class PetService {
         pet.setSex(Main.SCANNER.nextLine());
 
         while (!isSexValid(pet.getSex())) {
-            System.out.print("Invalid input. Please enter one of the following sexes (male / female): ");
+            System.out.print("Invalid input, please enter one of the following sexes (male / female): ");
             pet.setSex(Main.SCANNER.nextLine());
         }
 
         System.out.print("Age: ");
-        pet.setAge(Main.SCANNER.nextLine());
+        pet.setAge(Main.SCANNER.nextInt());
+        Main.SCANNER.nextLine(); // Очистити буфер
+
 
         System.out.print("Name: ");
         pet.setName(Main.SCANNER.nextLine());
 
         while (!isNameValid(pet.getName())) {
-            System.out.print("Invalid input. Please enter the Name in following format (The first letter is capital, the rest are small): ");
+            System.out.print("Invalid input, please enter the Name in following format (The first letter is capital, the rest are small): ");
             pet.setName(Main.SCANNER.nextLine());
         }
 
@@ -56,7 +58,7 @@ public class PetService {
             System.out.print("Size (XS / S / M / L / XL / XXL): ");
             ((Dog) pet).setSize(Main.SCANNER.nextLine().toUpperCase()); // перетворюємо в верхній регістр
             while (!isSizeValid(((Dog) pet).getSize())) {
-                System.out.print("Invalid input. Please enter one of the following sizes (XS, S, M, L, XL, XXL): ");
+                System.out.print("Invalid input, please enter one of the following sizes (XS, S, M, L, XL, XXL): ");
                 ((Dog) pet).setSize(Main.SCANNER.nextLine().toUpperCase());
             }
         }

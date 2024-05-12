@@ -9,18 +9,23 @@ public class ApplicationRunner {
 
     private final ClientService clientService = new ClientService(); //переробив на final
     private final PetService petService = new PetService(); //переробив на final
-
     private static final String ANSWEAR_ADD_PET_YES = "Yes"; //переробив на final
     private static final String ANSWEAR_ADD_PET_NO = "No"; //переробив на final
 
     public void run() {
+        String ANSWEAR = null;
         if (Authenticator.auth()) {
             Client client = clientService.registerNewClient();
 
             if (client != null) { // Если Client не null
 
                 System.out.print("Would you like to add a pet? (Yes / No): "); // функціонал перевірки необхідності клієнта у реєстрації улюбленця одразу.
-                String ANSWEAR = Main.SCANNER.nextLine().toLowerCase(); //перетворюємо в нижній регістр (.toLowerCase())
+                ANSWEAR = Main.SCANNER.nextLine().toLowerCase(); //перетворюємо в нижній регістр (.toLowerCase())
+
+                while (!ANSWEAR.equalsIgnoreCase(ANSWEAR_ADD_PET_YES) && !ANSWEAR.equalsIgnoreCase(ANSWEAR_ADD_PET_NO)) {
+                    System.out.print("Please make the right choice (Yes / No): ");
+                    ANSWEAR = Main.SCANNER.nextLine().toLowerCase();
+                }
 
                 //No
                 if (ANSWEAR_ADD_PET_NO.equalsIgnoreCase(ANSWEAR)) { // Якщо No, не додаємо Pet (перевіряємо без урахування регістру IgnoreCase)
@@ -31,15 +36,14 @@ public class ApplicationRunner {
                 if (ANSWEAR_ADD_PET_YES.equalsIgnoreCase(ANSWEAR)) { // Якщо так, додаємо Pet (перевіряємо без урахування регістру IgnoreCase)
                     System.out.println("Adding a new pet."); //=> додаємо Pet
 
-                    Pet pet = petService.registerNewPet();// виклик метода рєєстрації NewPet
-                    if ( (pet != null)) {
+                    Pet pet = petService.registerNewPet(); // виклик метода рєєстрації NewPet
+                    if ((pet != null)) {
                         client.setPet(pet);
                         pet.setOwnerName(client.getFirstName() + " " + client.getLastName());
                         System.out.println("Pet has been added.");
                     }
-
-                    System.out.println(client); //вивід Клиєнта
                 }
+                System.out.println(client); //вивід Клиєнта
             }
         }
     }

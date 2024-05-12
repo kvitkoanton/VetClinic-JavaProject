@@ -9,41 +9,50 @@ public class ClientService {
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._]+\\.[a-zA-Z]{2,}$";
     private static final String FIRST_LAST_NAME_PATTERN = "^[a-zA-Z-]{3,}$";
 
-
     public Client registerNewClient() {
         Client client = null;
+        String email;
+        String firstName;
+        String lastName;
 
         System.out.println("Please provide client details.");
         System.out.print("E-Mail: ");
-        String email = Main.SCANNER.nextLine();
-        if (!isEmailValid(email)) {
-            System.out.println("Providet E-Mail is invalid");
-        } else {
-            System.out.print("First name: ");
-            String firstName = Main.SCANNER.nextLine();
-            if (!isFirstNamelValid(firstName)) {
-                System.out.println("Providet First name is invalid");
-            } else {
-                System.out.print("Last name: ");
-                String lastName = Main.SCANNER.nextLine();
-                if (!isLastNamelValid(lastName)) {
-                    System.out.println("Providet Last name is invalid");
-                } else {
-                    client = buildClient(email, firstName, lastName);
-                    System.out.println("New client: " + client.getFirstName()
-                            + " " + client.getLastName()
-                            + " (" + client.getEmail() + ")");
-                }
-            }
+        email = Main.SCANNER.nextLine();
+
+        while (!isEmailValid(email)) {
+            System.out.print("Providet E-Mail is invalid, please indicate in the following format (xxx.xxx@xxx.xxx): ");
+            email = Main.SCANNER.nextLine();
         }
+
+        System.out.print("First name: ");
+        firstName = Main.SCANNER.nextLine();
+
+        while (!isFirstNamelValid(firstName)) {
+            System.out.print("Providet First name is invalid, please indicate in following format (a-zA-Z, min 3 characters): ");
+            firstName = Main.SCANNER.nextLine();
+        }
+
+        System.out.print("Last name: ");
+        lastName = Main.SCANNER.nextLine();
+
+        while (!isLastNamelValid(lastName)){
+            System.out.print("Providet Last name is invalid, please indicate in following format (a-zA-Z, min 3 characters): ");
+            lastName = Main.SCANNER.nextLine();
+        }
+
+        client = buildClient(email, firstName, lastName);
+        System.out.println("New client: " + client.getFirstName()
+                                    + " " + client.getLastName()
+                                    + " with E-Mail: " + client.getEmail() + " has been created)");
+
         return client;
     }
 
     private static Client buildClient(String email, String firstName, String lastName) {
         Client client = new Client();
-        client.setEmail(email);
-        client.setFirstName(firstName);
-        client.setLastName(lastName);
+        client.setEmail(email); //було тыльки так
+        client.setFirstName(firstName); //було тыльки так
+        client.setLastName(lastName); //було тыльки так
         return client;
     }
 

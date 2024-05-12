@@ -2,13 +2,21 @@ package main.java.com.magicvet.model;
 
 import java.util.Objects;
 
-public abstract class Pet {
+public class Pet { //was abstract
 
-    static String type; // переробив з privat в static
-    static String sex; // переробив з privat в static
-    static String age; // переробив з privat в static
-    static String name; // переробив з privat в static
-    static String ownerName; // переробив з privat в static
+    private String type;
+    private String sex;
+    private int age;
+    private String name;
+    private String ownerName;
+
+    public Pet(){}
+
+    public Pet(String name, int age, String sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -43,11 +51,11 @@ public abstract class Pet {
         this.sex = sex;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 

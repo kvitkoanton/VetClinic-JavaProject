@@ -11,21 +11,21 @@ public class Dog extends Pet{
     public static final String XL ="XL";
     public static final String XXL ="XXL";
 
-
     private String size;
-    public Dog() {}
+    public Dog() {
+    }
     public Dog(String size) {
         this.size = size;
     }
 
     @Override
         public String toString() {
-            return type  + " {"
-                    + "\n\t\tsex = " + sex
-                    + "\n\t\tage = " + age
-                    + "\n\t\tname = " + name
+            return getType() + " {"
+                    + "\n\t\tsex = " + getSex()
+                    + "\n\t\tage = " + getAge()
+                    + "\n\t\tname = " + getName()
                     + "\n\t\tsize = " + size
-                    + "\n\t\townerName = " + ownerName
+                    + "\n\t\townerName = " + getOwnerName()
                     + " }";
     }
 
