@@ -56,10 +56,12 @@ public class PetService {
 
         if (type.equalsIgnoreCase(DOG_TYPE)) {
             System.out.print("Size (XS / S / M / L / XL / XXL): ");
-            ((Dog) pet).setSize(Main.SCANNER.nextLine().toUpperCase()); // перетворюємо в верхній регістр
-            while (!isSizeValid(((Dog) pet).getSize())) {
+            String size = Main.SCANNER.nextLine().toUpperCase();// перетворюємо в верхній регістр
+            ((Dog) pet).setSize(Dog.Size.valueOf(size));
+            while (!isSizeValid(String.valueOf(((Dog) pet).getSize()))) {
                 System.out.print("Invalid input, please enter one of the following sizes (XS, S, M, L, XL, XXL): ");
-                ((Dog) pet).setSize(Main.SCANNER.nextLine().toUpperCase());
+                size = Main.SCANNER.nextLine().toUpperCase();
+                ((Dog) pet).setSize(Dog.Size.valueOf(size));
             }
         }
         return pet;
