@@ -17,8 +17,8 @@ public class PetService {
 
     public Pet registerNewPet() {
         Pet pet = null;
+        System.out.print("Type (dog / cat): ");
         while (pet == null) {
-            System.out.print("Type (dog / cat): ");
             String type = Main.SCANNER.nextLine().toLowerCase();
             if (DOG_TYPE.equalsIgnoreCase(type) || CAT_TYPE.equalsIgnoreCase(type)) {
                 pet = buildPet(type);

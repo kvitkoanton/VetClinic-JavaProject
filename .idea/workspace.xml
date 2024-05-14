@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-06: Sort dogs by size">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/comparator/PetAgeComparator.java" afterDir="false" />
+    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-06: Sort dogs by size and Pet age">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/component/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/component/ApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715003291430</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="REQ-06: Sort dogs by size and Pet age">
+      <option name="closed" value="true" />
+      <created>1715507976676</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715507976676</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -239,6 +240,7 @@
     <MESSAGE value="REQ-04: Show client Info (with pet)" />
     <MESSAGE value="REQ-05: Remove pet type &quot;Other&quot;" />
     <MESSAGE value="REQ-06: Sort dogs by size" />
-    <option name="LAST_COMMIT_MESSAGE" value="REQ-06: Sort dogs by size" />
+    <MESSAGE value="REQ-06: Sort dogs by size and Pet age" />
+    <option name="LAST_COMMIT_MESSAGE" value="REQ-06: Sort dogs by size and Pet age" />
   </component>
 </project>
