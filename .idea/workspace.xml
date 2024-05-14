@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-06: Sort dogs by size and Pet age">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/comparator/DogSizeComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" afterDir="false" />
-    </list>
+    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-07: use enum for dog size" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715701256060</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="REQ-07: use enum for dog size">
+      <option name="closed" value="true" />
+      <created>1715711346351</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715711346351</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -252,6 +254,7 @@
     <MESSAGE value="REQ-05: Remove pet type &quot;Other&quot;" />
     <MESSAGE value="REQ-06: Sort dogs by size" />
     <MESSAGE value="REQ-06: Sort dogs by size and Pet age" />
-    <option name="LAST_COMMIT_MESSAGE" value="REQ-06: Sort dogs by size and Pet age" />
+    <MESSAGE value="REQ-07: use enum for dog size" />
+    <option name="LAST_COMMIT_MESSAGE" value="REQ-07: use enum for dog size" />
   </component>
 </project>
