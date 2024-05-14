@@ -259,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715720184497</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="REQ-07-1: use enum for pet Heath State">
+      <option name="closed" value="true" />
+      <created>1715720730104</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715720730104</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
