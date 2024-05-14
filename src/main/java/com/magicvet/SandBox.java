@@ -31,14 +31,15 @@ public class SandBox {
             System.out.println(dog.getSize());
         }
 
-        System.out.println();
-        System.out.println("Sorting Pets by Age: ");
         Pet[] pets = {
                 new Pet("Chuck", 18, "male",Pet.HealthState.CHRONIC),
                 new Pet("Lacosta", 12, "female", Pet.HealthState.CRITICAL),
                 new Pet("Mercedes", 11, "female", Pet.HealthState.RECOVERING),
                 new Pet( "Amily", 10,"female",Pet.HealthState.SICK)
         };
+
+        System.out.println();
+        System.out.println("Sorting Pets by Age: ");
         Arrays.sort(pets, new Comparator<Pet>() {
             @Override
             public int compare(Pet o1, Pet o2) {
