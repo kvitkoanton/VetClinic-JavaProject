@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class Dog extends Pet{
 
-
     private Size size;
     public Dog() {
     }
@@ -19,6 +18,7 @@ public class Dog extends Pet{
                     + "\n\t\tage = " + getAge()
                     + "\n\t\tname = " + getName()
                     + "\n\t\tsize = " + size
+                    + "\n\t\thealthState = " + getHealthState()
                     + "\n\t\townerName = " + getOwnerName()
                     + " }";
     }

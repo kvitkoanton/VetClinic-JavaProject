@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-07: use enum for dog size" />
+    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-07: use enum for dog size">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/comparator/PetAgeComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +59,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -75,7 +81,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "req-07-1__Add__Health__State",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
@@ -253,6 +259,17 @@
     </task>
     <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="REQ-01: Base authentication" />

@@ -1,6 +1,5 @@
 package main.java.com.magicvet;
 
-import main.java.com.magicvet.comparator.PetAgeComparator;
 import main.java.com.magicvet.model.Dog;
 import main.java.com.magicvet.model.Pet;
 
@@ -35,15 +34,33 @@ public class SandBox {
         System.out.println();
         System.out.println("Sorting Pets by Age: ");
         Pet[] pets = {
-                new Pet("Chuck", 18, "male"),
-                new Pet("Lacosta", 12, "female"),
-                new Pet ("Mersedec", 11, "female"),
-                new Pet( "Amily", 10,"female")
+                new Pet("Chuck", 18, "male",Pet.HealthState.CHRONIC),
+                new Pet("Lacosta", 12, "female", Pet.HealthState.CRITICAL),
+                new Pet("Mercedes", 11, "female", Pet.HealthState.RECOVERING),
+                new Pet( "Amily", 10,"female",Pet.HealthState.SICK)
         };
-        Arrays.sort(pets, new PetAgeComparator());
+        Arrays.sort(pets, new Comparator<Pet>() {
+            @Override
+            public int compare(Pet o1, Pet o2) {
+                return o1.getAge() - o2.getAge();
+            }
+        });
 
         for (Pet pet : pets) {
             System.out.println(pet.getName() + ", " + pet.getAge() + ", " + pet.getSex());
         }
+
+        System.out.println();
+        System.out.println("Sorting pets by HealthState: ");
+        Arrays.sort(pets, new Comparator<Pet>() {
+            @Override
+            public int compare(Pet o1, Pet o2) {
+                return o1.getHealthState().getValue() - o2.getHealthState().getValue();
+            }
+        });
+        for (Pet pet : pets) {
+            System.out.println(pet.getHealthState().getValue() + ", " + pet.getName() + ", " + pet.getAge() + ", " + pet.getSex() + ", " + pet.getHealthState().getNote());
+        // реалзовать сортировку
+        };
     }
 }
