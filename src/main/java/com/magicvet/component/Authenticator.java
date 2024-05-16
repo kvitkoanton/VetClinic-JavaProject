@@ -15,12 +15,10 @@ public class Authenticator {
                 accepted = true;
                 break;
             }
-
             System.out.println("Access denied. Please check your password.");
         }
 
         System.out.println(accepted ? "Welcome to the Magic Vet!" : "Application has been blocked");
         return accepted;
     }
-
 }

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-07-1: use enum for pet Heath State" />
+    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-07-1: use enum for pet Heath State">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/SandBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/component/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/component/Authenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/model/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +61,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -75,7 +83,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "req-07-1__Add__Health__State",
+    "git-widget-placeholder": "req-08__registration__date",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
@@ -275,7 +283,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

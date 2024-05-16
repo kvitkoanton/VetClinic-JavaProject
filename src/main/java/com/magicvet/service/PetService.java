@@ -12,6 +12,7 @@ public class PetService {
     private static final String SIZE_PATTERN = "^(XS|S|M|L|XL|XXL)$"; // шаблон для розміру
     private static final String SEX_PATTERN = "^(male|female)$"; // шаблон для стать тварини
     private static final String NAME_PATTERN = "^[A-Z][a-z]*$"; // шаблон Ім'я
+    private static final String HEALTH_STATE_PATTERN = "^(HEALTHY|SICK|INJURED|RECOVERING|CRITICAL|CHRONIC|UNDER_OBSERVATION|DECEASED|UNKNOWN)$"; // шаблон для стану здоров'я
     private static final String DOG_TYPE = "dog";
     private static final String CAT_TYPE = "cat";
 
@@ -41,10 +42,9 @@ public class PetService {
             pet.setSex(Main.SCANNER.nextLine());
         }
 
-        System.out.print("Age: ");
+        System.out.print("Age (numbers only): ");
         pet.setAge(Main.SCANNER.nextInt());
         Main.SCANNER.nextLine(); // Очистити буфер
-
 
         System.out.print("Name: ");
         pet.setName(Main.SCANNER.nextLine());
@@ -62,9 +62,18 @@ public class PetService {
                 System.out.print("Invalid input, please enter one of the following sizes (XS, S, M, L, XL, XXL): ");
                 size = Main.SCANNER.nextLine().toUpperCase();
             }
-
-            ((Dog) pet).setSize(Dog.Size.valueOf(size));
+            ((Dog)pet).setSize(Dog.Size.valueOf(size));
         }
+        System.out.print("Health State (HEALTHY / SICK / INJURED / RECOVERING / CRITICAL / CHRONIC / UNDER_OBSERVATION / DECEASED / UNKNOWN): ");
+        String healthStateInput = Main.SCANNER.nextLine().toUpperCase();
+
+        while (!isHealthStateValid(healthStateInput)) {
+            System.out.print("Invalid input, please enter one of the following Health States \n"
+                    + "(HEALTHY / SICK / INJURED / RECOVERING / CRITICAL / CHRONIC / UNDER_OBSERVATION / DECEASED / UNKNOWN): ");
+            healthStateInput = Main.SCANNER.nextLine().toUpperCase();
+        }
+        pet.setHealthState(Pet.HealthState.valueOf(healthStateInput));
+
         return pet;
     }
 
@@ -83,4 +92,12 @@ public class PetService {
         Matcher matcherName = patternName.matcher(name);
         return matcherName.matches();
     }
+
+    private static boolean isHealthStateValid(String healthStateInput) {
+        Pattern patternHealthState = Pattern.compile(HEALTH_STATE_PATTERN, Pattern.CASE_INSENSITIVE); // шаблон для стану здоров'я без регістра
+        Matcher matcherHealthState = patternHealthState.matcher(healthStateInput);
+        return matcherHealthState.matches();
+    }
+
 }
+

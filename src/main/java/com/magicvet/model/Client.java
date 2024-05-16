@@ -1,20 +1,27 @@
 package main.java.com.magicvet.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Client {
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy"); // залишив такий шаблон як у классі Pet
+
     private String firstName;
     private String lastName;
     private String email;
     private Pet pet;
+    private final LocalDateTime registrationDateTimeClient = LocalDateTime.now();
+
 
     @Override
     public String toString() {
         return "Client {"
-                + "\n\tfirstName = " + firstName
-                + "\n\tlastName = " + lastName
-                + "\n\tE-mail = " + email
-                + "\n\tpet = " + pet
+                + "\n\tfirstName = " + getFirstName()
+                + "\n\tlastName = " + getLastName()
+                + "\n\tE-mail = " + getEmail()
+                + "\n\tregistrationDateTimeClient = " + getRegistrationDateTimeClient().format(FORMATTER)
+                + "\n\tpet = " + getPet()
                 + "\n}";
     }
 
@@ -26,12 +33,13 @@ public class Client {
         return Objects.equals(firstName, client.firstName)
                 && Objects.equals(lastName, client.lastName)
                 && Objects.equals(email, client.email)
+                && Objects.equals(registrationDateTimeClient, client.registrationDateTimeClient)
                 && Objects.equals(pet, client.pet);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, email, pet);
+        return Objects.hash(firstName, lastName, email, registrationDateTimeClient, pet);
     }
 
     public void setFirstName(String firstName) {
@@ -64,6 +72,10 @@ public class Client {
 
     public Pet getPet() {
         return pet;
+    }
+
+    public LocalDateTime getRegistrationDateTimeClient() {
+        return registrationDateTimeClient;
     }
 }
 

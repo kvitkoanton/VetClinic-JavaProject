@@ -1,5 +1,6 @@
 package main.java.com.magicvet;
 
+import main.java.com.magicvet.model.Cat;
 import main.java.com.magicvet.model.Dog;
 import main.java.com.magicvet.model.Pet;
 
@@ -9,7 +10,6 @@ import java.util.Comparator;
 public class SandBox {
 
     public static void main(String[] args) {
-        System.out.println("Sorting dogs by Size: ");
 
         Dog[] dogs = {
                 new Dog(Dog.Size.M),
@@ -20,6 +20,8 @@ public class SandBox {
                 new Dog(Dog.Size.S),
                 new Dog(Dog.Size.L)
         };
+
+        System.out.println("Sorting dogs by Size: ");
         Arrays.sort(dogs, new Comparator<Dog>() {
             @Override
             public int compare(Dog o1, Dog o2) {
@@ -32,10 +34,11 @@ public class SandBox {
         }
 
         Pet[] pets = {
-                new Pet("Chuck", 18, "male",Pet.HealthState.CHRONIC),
-                new Pet("Lacosta", 12, "female", Pet.HealthState.CRITICAL),
-                new Pet("Mercedes", 11, "female", Pet.HealthState.RECOVERING),
-                new Pet( "Amily", 10,"female",Pet.HealthState.SICK)
+                new Pet("Cat", "Chuck", 18, "male",Pet.HealthState.CHRONIC),
+                new Pet("Cat", "Lacosta", 12, "female",Pet.HealthState.CRITICAL),
+                new Pet("Cat", "Mercedes", 11, "female",Pet.HealthState.RECOVERING),
+                new Pet("Cat", "Amily", 10, "female",Pet.HealthState.SICK),
+
         };
 
         System.out.println();
@@ -61,7 +64,9 @@ public class SandBox {
         });
         for (Pet pet : pets) {
             System.out.println(pet.getHealthState().getValue() + ", " + pet.getName() + ", " + pet.getAge() + ", " + pet.getSex() + ", " + pet.getHealthState().getNote());
-        // реалзовать сортировку
         };
+        System.out.println("Pet " + new Pet());
+        System.out.println("Cat " + new Cat());
+        System.out.println("Dog " + new Dog());
     }
 }
