@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Client {
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy"); // залишив такий шаблон як у классі Pet
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm dd.MM.yyyy"); // залишив такий шаблон як у классі Pet, бо мені він подобається
 
     private String firstName;
     private String lastName;

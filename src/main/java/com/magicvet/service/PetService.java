@@ -12,6 +12,7 @@ public class PetService {
     private static final String SIZE_PATTERN = "^(XS|S|M|L|XL|XXL)$"; // шаблон для розміру
     private static final String SEX_PATTERN = "^(male|female)$"; // шаблон для стать тварини
     private static final String NAME_PATTERN = "^[A-Z][a-z]*$"; // шаблон Ім'я
+    private static final String AGE_PATTERN = "^[0-9]+$"; // шаблон віку
     private static final String HEALTH_STATE_PATTERN = "^(HEALTHY|SICK|INJURED|RECOVERING|CRITICAL|CHRONIC|UNDER_OBSERVATION|DECEASED|UNKNOWN)$"; // шаблон для стану здоров'я
     private static final String DOG_TYPE = "dog";
     private static final String CAT_TYPE = "cat";
@@ -43,8 +44,13 @@ public class PetService {
         }
 
         System.out.print("Age (numbers only): ");
-        pet.setAge(Main.SCANNER.nextInt());
-        Main.SCANNER.nextLine(); // Очистити буфер
+        String ageInput = Main.SCANNER.nextLine(); // Очистити буфер
+
+        while(!isAgeValid(ageInput)){
+            System.out.print("Invalid input, please enter the Age in following format (numbers only): ");
+            ageInput = Main.SCANNER.nextLine();
+        }
+        pet.setAge(Integer.parseInt(ageInput));
 
         System.out.print("Name: ");
         pet.setName(Main.SCANNER.nextLine());
@@ -97,6 +103,12 @@ public class PetService {
         Pattern patternHealthState = Pattern.compile(HEALTH_STATE_PATTERN, Pattern.CASE_INSENSITIVE); // шаблон для стану здоров'я без регістра
         Matcher matcherHealthState = patternHealthState.matcher(healthStateInput);
         return matcherHealthState.matches();
+    }
+
+    private static boolean isAgeValid(String ageInput) {
+        Pattern patternAgeInput = Pattern.compile(AGE_PATTERN); // шаблон віку
+        Matcher matcherAgeInput = patternAgeInput.matcher(ageInput);
+        return matcherAgeInput.matches();
     }
 
 }
