@@ -28,13 +28,13 @@ public class Pet { //was abstract
     @Override
     public String toString() {
         return getType() + " {"
-                + "\n\t\tsex = " + getSex()
-                + "\n\t\tage = " + getAge()
-                + "\n\t\tname = " + getName()
-                + "\n\t\thealthState = " + getHealthState()
-                + "\n\t\townerName = " + getOwnerName()
-                + "\n\t\tregistrationDateTimePet = " + getRegistrationDateTimePet().format(FORMATTER)
-                + " }";
+                + "sex = " + getSex()
+                + ", age = " + getAge()
+                + ", name = " + getName()
+                + ", healthState = " + getHealthState()
+                + ", ownerName = " + getOwnerName()
+                + ", registrationDateTimePet = " + getRegistrationDateTimePet().format(FORMATTER)
+                + "}\n";
     }
 
     @Override

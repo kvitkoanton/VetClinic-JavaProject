@@ -13,38 +13,44 @@ public class ApplicationRunner {
     private static final String ANSWEAR_ADD_PET_NO = "No"; //переробив на final
 
     public void run() {
-        String ANSWEAR = null;
         if (Authenticator.auth()) {
             Client client = clientService.registerNewClient();
 
             if (client != null) { // Если Client не null
-
-                System.out.print("Would you like to add a pet? (Yes / No): "); // функціонал перевірки необхідності клієнта у реєстрації улюбленця одразу.
-                ANSWEAR = Main.SCANNER.nextLine().toLowerCase(); //перетворюємо в нижній регістр (.toLowerCase())
-
-                while (!ANSWEAR.equalsIgnoreCase(ANSWEAR_ADD_PET_YES) && !ANSWEAR.equalsIgnoreCase(ANSWEAR_ADD_PET_NO)) {
-                    System.out.print("Please make the right choice (Yes / No): ");
-                    ANSWEAR = Main.SCANNER.nextLine().toLowerCase();
-                }
-
-                //No
-                if (ANSWEAR_ADD_PET_NO.equalsIgnoreCase(ANSWEAR)) { // Якщо No, не додаємо Pet (перевіряємо без урахування регістру IgnoreCase)
-                    System.out.println("No pet added. You can add it at any time in the future.");
-                }
-
-                //Yes
-                if (ANSWEAR_ADD_PET_YES.equalsIgnoreCase(ANSWEAR)) { // Якщо так, додаємо Pet (перевіряємо без урахування регістру IgnoreCase)
-                    System.out.println("Adding a new pet."); //=> додаємо Pet
-
-                    Pet pet = petService.registerNewPet(); // виклик метода рєєстрації NewPet
-                    if ((pet != null)) {
-                        client.setPet(pet);
-                        pet.setOwnerName(client.getFirstName() + " " + client.getLastName());
-                        System.out.println("Pet has been added.");
-                    }
-                }
+                registerPets(client);
                 System.out.println(client); //вивід Клиєнта
             }
+        }
+    }
+
+    private void registerPets(Client client) {
+        String ANSWEAR = ANSWEAR_ADD_PET_YES;
+
+        while (ANSWEAR.equalsIgnoreCase(ANSWEAR_ADD_PET_YES)) {
+            addPet(client);
+            System.out.print("Would you like to add more pets? (Yes / No): "); // функціонал перевірки необхідності клієнта у реєстрації наступного улюбленця.
+            ANSWEAR = Main.SCANNER.nextLine().toLowerCase(); //перетворюємо в нижній регістр (.toLowerCase())
+
+            while (!ANSWEAR.equalsIgnoreCase(ANSWEAR_ADD_PET_YES) && !ANSWEAR.equalsIgnoreCase(ANSWEAR_ADD_PET_NO)) {
+                System.out.print("Please make the right choice (Yes / No): ");
+                ANSWEAR = Main.SCANNER.nextLine().toLowerCase();
+            }
+        }
+
+            // No
+        if (ANSWEAR.equalsIgnoreCase(ANSWEAR_ADD_PET_NO)) {
+            System.out.println("Thank you for registering your pet. You can add more pets at any time in the future.");
+        }
+    }
+
+    private void addPet(Client client) {
+        System.out.println("Adding a new pet."); //=> додаємо Pet
+
+        Pet pet = petService.registerNewPet(); // виклик метода рєєстрації NewPet
+        if ((pet != null)) {
+            client.addPet(pet);
+            pet.setOwnerName(client.getFirstName() + " " + client.getLastName());
+            System.out.println("Pet has been added.");
         }
     }
 }

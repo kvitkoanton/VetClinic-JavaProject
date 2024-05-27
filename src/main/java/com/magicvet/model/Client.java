@@ -2,6 +2,8 @@ package main.java.com.magicvet.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Client {
@@ -10,19 +12,19 @@ public class Client {
     private String firstName;
     private String lastName;
     private String email;
-    private Pet pet;
+    private List<Pet> pets = new ArrayList<>();
     private final LocalDateTime registrationDateTimeClient = LocalDateTime.now();
 
 
     @Override
     public String toString() {
         return "Client {"
-                + "\n\tfirstName = " + getFirstName()
-                + "\n\tlastName = " + getLastName()
-                + "\n\tE-mail = " + getEmail()
-                + "\n\tregistrationDateTimeClient = " + getRegistrationDateTimeClient().format(FORMATTER)
-                + "\n\tpet = " + getPet()
-                + "\n}";
+                + "firstName = " + getFirstName()
+                + ", lastName = " + getLastName()
+                + ", E-mail = " + getEmail()
+                + ", registrationDateTimeClient = " + getRegistrationDateTimeClient().format(FORMATTER)
+                + ", pets:\n" + getPet()
+                + "}";
     }
 
     @Override
@@ -34,12 +36,12 @@ public class Client {
                 && Objects.equals(lastName, client.lastName)
                 && Objects.equals(email, client.email)
                 && Objects.equals(registrationDateTimeClient, client.registrationDateTimeClient)
-                && Objects.equals(pet, client.pet);
+                && Objects.equals(pets, client.pets);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, email, registrationDateTimeClient, pet);
+        return Objects.hash(firstName, lastName, email, registrationDateTimeClient, pets);
     }
 
     public void setFirstName(String firstName) {
@@ -66,16 +68,22 @@ public class Client {
         return email;
     }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
+    public void setPet(List<Pet> pets) {
+        this.pets = pets;
     }
 
-    public Pet getPet() {
-        return pet;
+    public List<Pet> getPet() {
+        return pets;
     }
 
     public LocalDateTime getRegistrationDateTimeClient() {
         return registrationDateTimeClient;
     }
+
+    public void addPet(Pet pet) {
+        pets.add(pet);
+    }
+
+
 }
 

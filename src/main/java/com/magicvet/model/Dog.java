@@ -17,14 +17,14 @@ public class Dog extends Pet{
     @Override
     public String toString() {
         return getType() + " {"
-                + "\n\t\tsex = " + getSex()
-                + "\n\t\tage = " + getAge()
-                + "\n\t\tname = " + getName()
-                + "\n\t\tsize = " + size
-                + "\n\t\thealthState = " + getHealthState()
-                + "\n\t\townerName = " + getOwnerName()
-                + "\n\t\tregistrationDateTimePet = " + getRegistrationDateTimePet().format(FORMATTER)
-                + " }";
+                + "sex = " + getSex()
+                + ", age = " + getAge()
+                + ", name = " + getName()
+                + ", size = " + size
+                + ", healthState = " + getHealthState()
+                + ", ownerName = " + getOwnerName()
+                + ", registrationDateTimePet = " + getRegistrationDateTimePet().format(FORMATTER)
+                + "}\n";
     }
 
     @Override
