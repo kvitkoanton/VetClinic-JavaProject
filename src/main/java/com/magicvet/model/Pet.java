@@ -27,8 +27,8 @@ public class Pet { //was abstract
     }
     @Override
     public String toString() {
-        return getType() + " {"
-                + "sex = " + getSex()
+        return getType()
+                + " {sex = " + getSex()
                 + ", age = " + getAge()
                 + ", name = " + getName()
                 + ", healthState = " + getHealthState()

@@ -20,7 +20,7 @@ public class Dog extends Pet{
                 + "sex = " + getSex()
                 + ", age = " + getAge()
                 + ", name = " + getName()
-                + ", size = " + size
+                + ", size = " + getSize()
                 + ", healthState = " + getHealthState()
                 + ", ownerName = " + getOwnerName()
                 + ", registrationDateTimePet = " + getRegistrationDateTimePet().format(FORMATTER)
