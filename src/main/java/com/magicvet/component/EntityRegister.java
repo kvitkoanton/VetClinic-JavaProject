@@ -38,7 +38,7 @@ public class EntityRegister {
         for (Map.Entry<Client.Location, List<Client>> clients : clientsByLocation.entrySet()) {
             String content =  "\nLocation: " + clients.getKey()
                              +"\nClients (" + clients.getValue().size() + "):"
-                             +"\n\t" + clients.getValue();
+                             +"\t" + clients.getValue();
 
             System.out.println(content);
         }

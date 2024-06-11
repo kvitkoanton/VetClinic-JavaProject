@@ -42,7 +42,7 @@ public class ClientService {
             lastName = Main.SCANNER.nextLine();
         }
 
-        System.out.print("Enter Location: ");
+        System.out.print("Enter Location, please choose 3 cities (KYIV|LVIV|ODESA):  ");
         location = Main.SCANNER.nextLine().toUpperCase();
         while (!islocationValid(location)) {
             System.out.print("Providet Location is invalid, please choose 3 cities (KYIV|LVIV|ODESA): ");

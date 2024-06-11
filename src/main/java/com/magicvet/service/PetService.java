@@ -46,10 +46,15 @@ public class PetService {
         System.out.print("Age (numbers only): ");
         String ageInput = Main.SCANNER.nextLine(); // Очистити буфер
 
-        while(!isAgeValid(ageInput)){
-            System.out.print("Invalid input, please enter the Age in following format (numbers only): ");
+        while (!isAgeValid(ageInput) || Integer.parseInt(ageInput) < 0) {
+            if (!isAgeValid(ageInput)) {
+                System.out.print("Invalid input, please enter the Age in following format (numbers only): ");
+            } else if (Integer.parseInt(ageInput) < 0) {
+                System.out.print("Age cannot be negative. Please enter a valid Age: ");
+            }
             ageInput = Main.SCANNER.nextLine();
         }
+
         pet.setAge(Integer.parseInt(ageInput));
 
         System.out.print("Name: ");
