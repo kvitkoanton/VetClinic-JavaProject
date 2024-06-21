@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-10: Add a few clients and print them (grouped by cities)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magicvet/service/PetService.java" afterDir="false" />
-    </list>
+    <list default="true" id="cf590351-a144-4909-9bd0-0958286103df" name="Changes" comment="REQ-10: Add a few clients and print them (grouped by cities)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -295,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717189729180</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="REQ-12: Use Streams and Optional">
+      <option name="closed" value="true" />
+      <created>1718973111937</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1718973111937</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -328,7 +332,9 @@
     <MESSAGE value="REQ-08: Add registation date for Pet class and Client class" />
     <MESSAGE value="REQ-08: Add registration date for Pet class and Client class + format age" />
     <MESSAGE value="REQ-10: Add a few clients and print them (grouped by cities)" />
-    <option name="LAST_COMMIT_MESSAGE" value="REQ-10: Add a few clients and print them (grouped by cities)" />
+    <MESSAGE value="REQ-11: Illegal Age bug" />
+    <MESSAGE value="REQ-12: Use Streams and Optional" />
+    <option name="LAST_COMMIT_MESSAGE" value="REQ-12: Use Streams and Optional" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
